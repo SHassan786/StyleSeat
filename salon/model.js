@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 
 const salonSchema = new mongoose.Schema(
   {
@@ -53,11 +53,12 @@ const salonSchema = new mongoose.Schema(
   }
   // { timestamps: true }
 );
-
-salonSchema.pre("save", function (next) {
+/*salonSchema.pre("save", function (next) {
   this.password = bcrypt.hashSync(this.password, 10);
   next();
 });
+
+*/
 
 const Salon = mongoose.model("salon", salonSchema);
 

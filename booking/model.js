@@ -2,15 +2,9 @@ const mongoose = require("mongoose");
 
 const bookingSchema = new mongoose.Schema(
   {
-    startTime: {
+    createdatTime: {
       hour: { type: Number },
       minutes: { type: Number },
-    },
-    endTime: { hour: { type: Number }, minutes: { type: Number } },
-    customer: {
-      type: mongoose.Schema.ObjectId,
-      ref: "customer",
-      required: true,
     },
     salon: [
       {
@@ -65,13 +59,13 @@ const bookingSchema = new mongoose.Schema(
       enum: ["PAID", "UNPAID"],
       default: "UNPAID",
     },
-        // shifts: [
-    //   {
-    //     type: mongoose.Schema.ObjectId,
-    //     ref: "shift",
-    //     required: true,
-    //   },
-    // ],
+         shifts: [
+       {
+         type: mongoose.Schema.ObjectId,
+         ref: "shift",
+        required: true,
+       },
+     ],
   }
   // { timestamps: true }
 );

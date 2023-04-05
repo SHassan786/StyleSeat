@@ -10,10 +10,6 @@ const shiftSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    duration: {
-        type: Number,
-        required: true,
-    },
     // date: {
     //   type: Date,
     // },
@@ -21,6 +17,7 @@ const shiftSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    
   }
   // { timestamps: true }
 );

@@ -3,7 +3,7 @@ const salonController = require('./controller');
 const router = express.Router();
 
 
-// router.post('/', itemController.addItem);
+ router.post('/createSalon', salonController.createSalon);
 
 
 module.exports = router;

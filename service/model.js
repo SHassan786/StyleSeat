@@ -10,6 +10,10 @@ const serviceSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    duration: {
+      type: Number,
+      required: true,
+  },
     image: {
       type: String,
     },
@@ -21,12 +25,13 @@ const serviceSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
-    salons: [
+   /* salons: [
       {
         type: mongoose.Schema.ObjectId,
         ref: "salon",
       },
     ],
+    */
     shifts: [
       {
         type: mongoose.Schema.ObjectId,
